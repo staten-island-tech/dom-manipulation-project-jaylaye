@@ -1,30 +1,25 @@
 const DOMSelectors = {
-    button: document.getElementById("btn"),
-    text: document.querySelector("#text"),
-    box: document.getElementById("big-black-box"),
-    point: document.querySelector(".point"),
+    form: document.querySelector('#form'),
+    val: document.querySelector('#val'),
+    type: document.querySelector('#type'),
+    image: document.querySelector('#image'),
+    container: document.querySelector('.container')
 
 };
-function backgroundAndText(background, text){
-    background.style.backgroundColor = "red";
-    text.innerHTML = "This is now a big red box";
-    text.style.fontSize = "40px";
-}
-console.log(DOMSelectors.point);
 
-backgroundAndText(DOMSelectors.box, DOMSelectors.text);
-DOMSelectors.button.addEventListener("click", function(){
-    backgroundAndText(DOMSelectors.box, DOMSelectors.text)
+DOMSelectors.form.addEventListener("submit", function (event){
+    event.preventDefault();
+    const card = {
+        val: DOMSelectors.val.value,
+        type: DOMSelectors.type.value,
+        image: DOMSelectors.image.value,
+    };
+    createCard(card);
+    clearFields();
 });
 
-function changeLi(){
-    let pointIndex = 1;
-    DOMSelectors.points.forEach((point) => {
-point.addEventListener("click", function (){
-    point.textContent = 'Hello I am point ${pointIndex}';
-    pointIndex++;
-});
-
-    });
+function createCard(card){
+    DOMSelectors.container.createAdjacentHTML(
+        
+    )
 }
-changeLi();

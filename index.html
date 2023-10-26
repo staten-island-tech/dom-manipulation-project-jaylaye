@@ -2,15 +2,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>DOM Manipulation</title>
 </head>
 <body>
-    <button type="button" id="btn">Click Me!</button>
-    <ul>
-        <li class="point">1</li>
-        <li class="point">2</li>
-        <li class="point">3</li>
-    </ul>
+    <div class = "header">
+        <h1>Photocard wooo!</h1>
+</div>
+    <form action=" " id="form">
+        <label for="val">Enter Agent Name</label>
+        <input type="text" id="val">
+
+        <label for="type">Enter Agent Type </label>
+        <input type="text" id="type">
+
+        <label for="image">Show Agent image</label>
+        <input type="text" id="image">
+
+        <input type = "submit" value="submit" class="submitButton" />
+    
+        <div class="container">
+            <!-- <div class="card">
+            <h2> card.val </h2>
+            <img src="card.image" alt="">
+            <p> card.type</p>
+        </div> -->
+</div>
+    </form>
+ 
     <script src="index.js"></script>
 </body>
 </html>
