@@ -20,6 +20,14 @@ DOMSelectors.form.addEventListener("submit", function (event){
 
 function createCard(card){
     DOMSelectors.container.createAdjacentHTML(
-        
+        "afterbegin",
+        <div class="card1">
+        <div class="card">
+        <h2>${card.title}</h2>
+        <img class="card-img" src="${card.image}" alt=""></img>
+        <p>${card.type}</p>
+        </div>
+        <button class="removeBtn"
+
     )
-}
+};
