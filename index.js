@@ -27,7 +27,22 @@ function createCard(card){
         <img class="card-img" src="${card.image}" alt=""></img>
         <p>${card.type}</p>
         </div>
-        <button class="removeBtn"
-
+        <button class="removeBtn"></button>
+        </div>
     )
 };
+
+function clearW(){
+    DOMSelectors.val.value = "";
+    DOMSelectors.type.value = "";
+    DOMSelectors.image.value = "";
+};
+
+function removeW(){
+    const removee = document.querySelectorAll(".dommymommy");
+    removee.forEach(card => {card.addEventListener("click", function(word){
+    word.target.parentElement.removee();
+    }
+    )})
+    removee.remove();
+}
