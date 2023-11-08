@@ -15,34 +15,41 @@ DOMSelectors.form.addEventListener("submit", function (event){
         image: DOMSelectors.image.value,
     };
     createCard(card);
+    removeW();
     clearFields();
 });
 
-function createCard(card){
-    DOMSelectors.container.createAdjacentHTML(
+function clearFields() {
+    DOMSelectors.val.value = "";
+    DOMSelectors.type.value = "";
+    DOMSelectors.image.value = "";
+}
+
+function createCard(card) {
+    DOMSelectors.container.insertAdjacentHTML(
         "afterbegin",
-        <div class="card1">
+        `
         <div class="card">
-        <h2>${card.title}</h2>
-        <img class="card-img" src="${card.image}" alt=""></img>
-        <p>${card.type}</p>
+            <h2>${card.val}</h2>
+            <img class="card-img" src="${card.image}" alt="">
+            <p>${card.type}</p>
+            <button class="removeBtn">Remove</button>
         </div>
-        <button class="removeBtn"></button>
-        </div>
-    )
-};
+        `
+    );
+}
+
+function removeW() {
+    const removee = document.querySelectorAll(".removeBtn");
+    removee.forEach(button => {
+        button.addEventListener("click", function () {
+            button.parentElement.remove();
+        });
+    });
+}
 
 function clearW(){
     DOMSelectors.val.value = "";
     DOMSelectors.type.value = "";
     DOMSelectors.image.value = "";
 };
-
-function removeW(){
-    const removee = document.querySelectorAll(".dommymommy");
-    removee.forEach(card => {card.addEventListener("click", function(word){
-    word.target.parentElement.removee();
-    }
-    )})
-    removee.remove();
-}
