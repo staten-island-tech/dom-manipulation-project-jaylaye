@@ -17,8 +17,13 @@ function linearSearch(num, arr){
             console.log("still looking")
         }
     }
+    if (!found){
+        console.log("sorry I couldnt find that")
+    } else {
     console.log(found);
+    }
     return found;
+
 }
 
 linearSearch(5, numsArr);
