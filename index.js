@@ -44,7 +44,6 @@ function removeW() {
     const removeButtons = document.querySelectorAll(".removeBtn");
     removeButtons.forEach(button => {
         button.addEventListener("click", function () {
-            // Use event delegation to find the parent card and remove it
             const card = button.closest('.card');
             if (card) {
                 card.remove();
