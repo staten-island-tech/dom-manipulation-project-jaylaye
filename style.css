@@ -1,39 +1,47 @@
-
-body{
+body {
     text-align: center;
-    padding: auto;
+    padding: 0;
+    margin: 0;
+    background-image: url('https://wallpapers.com/images/hd/valorant-background-rfflj0dso9bzkj4p.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
 }
+
 .header {
     font-size: 37px;
-    font-family: Agbalumo;
+    font-family: 'Agbalumo', sans-serif;
     text-align: center;
 }
 
-#form{
+#form {
     font-size: 20px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-text,
+.text {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    font-family: 'Agbalumo', sans-serif;
+    font-size: 24px;
+    color: #000;
 }
 
 .image-text {
-    position: absolute;
-    top: 18%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 10px;
-    font-family: 'Agbalumo', sans-serif;
-    font-size: 24px;
-    color: #000;
+    margin-top: 18px;
 }
 
-.text{
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 10px;
-    font-family: 'Agbalumo', sans-serif;
-    font-size: 24px;
-    color: #000;
+.text {
+    margin-top: 18px;
     white-space: nowrap;
 }
+

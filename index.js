@@ -4,10 +4,9 @@ const DOMSelectors = {
     type: document.querySelector('#type'),
     image: document.querySelector('#image'),
     container: document.querySelector('.container')
-
 };
 
-DOMSelectors.form.addEventListener("submit", function (event){
+DOMSelectors.form.addEventListener("submit", function (event) {
     event.preventDefault();
     const card = {
         val: DOMSelectors.val.value,
@@ -15,7 +14,6 @@ DOMSelectors.form.addEventListener("submit", function (event){
         image: DOMSelectors.image.value,
     };
     createCard(card);
-    removeW();
     clearFields();
 });
 
@@ -37,19 +35,20 @@ function createCard(card) {
         </div>
         `
     );
+
+    // Now call the removeW function after creating the card
+    removeW();
 }
 
 function removeW() {
-    const removee = document.querySelectorAll(".removeBtn");
-    removee.forEach(button => {
+    const removeButtons = document.querySelectorAll(".removeBtn");
+    removeButtons.forEach(button => {
         button.addEventListener("click", function () {
-            button.parentElement.remove();
+            // Use event delegation to find the parent card and remove it
+            const card = button.closest('.card');
+            if (card) {
+                card.remove();
+            }
         });
     });
 }
-
-function clearW(){
-    DOMSelectors.val.value = "";
-    DOMSelectors.type.value = "";
-    DOMSelectors.image.value = "";
-};
